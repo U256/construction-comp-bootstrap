@@ -38,8 +38,10 @@ let { src, dest } = require("gulp"),
   uglify = require("gulp-uglify-es").default,
   imagemin = require("gulp-imagemin"),
   ttf2woff = require("gulp-ttf2woff"),
-  ttf2woff2 = require("gulp-ttf2woff2");
-fonter = require("gulp-fonter");
+  ttf2woff2 = require("gulp-ttf2woff2"),
+  fonter = require("gulp-fonter"),
+  gulpStyleLint = require("gulp-stylelint"); 
+  
 
 function browserSync(params) {
   browsersync.init({
@@ -83,6 +85,20 @@ function css() {
       )
       .pipe(dest(path.build.css))
       .pipe(browsersync.stream())
+}
+
+// линтер
+function lintCss() {
+  return src(path.src.css)
+    .pipe(gulpStyleLint({
+      failAfterError: false,
+      reporters: [
+        {
+          formatter: 'string',
+          console: true
+        }
+      ]
+    }))
 }
 
 function js() {
@@ -185,7 +201,9 @@ let build = gulp.series(
 );
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+//объявление задач
 exports.fontsStyle = fontsStyle;
+exports.lintCss = lintCss;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;

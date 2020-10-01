@@ -1,6 +1,15 @@
 .achievements-section {
   min-height: 530px;
   background-color: $soft-accent-bg;
+  margin-bottom: 140px;
+
+  @media (max-width: 992px) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: 576px) {
+    margin-bottom: 20px;
+  }
 
   &__title {
     padding-top: 73px;

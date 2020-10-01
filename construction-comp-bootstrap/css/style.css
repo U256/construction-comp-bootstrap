@@ -132,6 +132,14 @@ h1, h2, h3, h4, h5, h6 {
   background: url(../images/right-arrow.svg) right bottom 12px/17px no-repeat;
 }
 
+.to-page-btn {
+  outline: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background: url(../images/right-arrow.svg) right top/25px no-repeat;
+}
+
 .header {
   position: relative;
   min-height: 550px;
@@ -366,6 +374,19 @@ h1, h2, h3, h4, h5, h6 {
 .achievements-section {
   min-height: 530px;
   background-color: #f7f9ff;
+  margin-bottom: 140px;
+}
+
+@media (max-width: 992px) {
+  .achievements-section {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .achievements-section {
+    margin-bottom: 20px;
+  }
 }
 
 .achievements-section__title {
@@ -386,4 +407,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .achievements-section__scope {
   font-size: 2.7rem;
+}
+
+.projects-section__top-row {
+  margin-bottom: 40px;
 }

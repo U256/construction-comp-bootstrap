@@ -6,7 +6,7 @@
   font-weight: 700;
 
   @media (max-width: 1200px) {
-     font-size: 3rem;
+    font-size: 3rem;
   }
 
   &::after {
@@ -33,4 +33,24 @@
   padding: 15px 30px 5px 0;
   font-weight: 500;
   background: url(../images/right-arrow.svg) right bottom 12px/17px no-repeat;
+}
+
+.to-page-btn {
+  outline: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background: url(../images/right-arrow.svg) right top/25px no-repeat;
+}
+
+.theme-badge {
+  
+}
+
+.anim-btn {
+  // сделать и добавить
+}
+
+@mixin ($fz) {
+  font-size: $fz;
 }
