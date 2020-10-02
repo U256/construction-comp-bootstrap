@@ -4,7 +4,7 @@
     position: relative;
     min-height: 695px;
     left: -64px;
-    top: -260px;
+    top: -220px;
     z-index: 1;
     background-color: #fff;
     display: flex;
@@ -12,7 +12,7 @@
     align-items: flex-start;
     box-shadow: 0 10px 59px rgba(0, 0, 0, 0.15);
     padding: 54px 64px;
-    margin-bottom: 20px;
+    margin-bottom: -60px;
 
     @media (max-width: 1300px) {
       left: -10px;
@@ -20,12 +20,13 @@
 
     @media (max-width: 992px) {
       padding: 20px;
-      top: -210px;
+      top: -170px;
     }
 
     @media (max-width: 768px) {
       left: 0;
       top: 0;
+      margin-bottom: 30px;
     }
   }
 
@@ -42,7 +43,7 @@
   &__image-col {
     position: relative;
     padding: 0;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
 
     &::after {
       content: "";

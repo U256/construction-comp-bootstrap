@@ -4,14 +4,10 @@
   height: 100vh;
   color: #fff;
   overflow-x: hidden;
-  margin-bottom: 127px;
+  margin-bottom: 87px;
 
   @media (max-width: 992px) {
-    margin-bottom: 80px;
-  }
-
-  @media (max-width: 576px) {
-     margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 
   &__bg-holder {
@@ -23,8 +19,11 @@
     background-position: top center, center;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
+
+    transition: 0.7s;
     background-image: url(../images/header/header-top-shage.svg),
       url(../images/header/header-bg.jpg);
+    transform: translate(0, 0);
   }
 
   &__top-row {
