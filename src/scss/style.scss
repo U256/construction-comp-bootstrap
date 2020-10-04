@@ -1,0 +1,56 @@
+@import "reset";
+//contains only my webkit resets, other - in bootstrap
+
+$title-text-color: #404040;
+$text-color: #3d3d3d;
+$pale-text-color: #dbdbdb;
+$accent-color: #7a50ff;
+$pale-accent-color: #b9a2ff;
+$soft-accent-bg: #f7f9ff;
+
+// шаблонные селекторы
+%flex-aiCenter-jcsBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%flex-centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import "fonts";
+
+html {
+	font-size: 10px;
+  font-family: "Metropolis";
+  color: $text-color;
+
+  @media (max-width: 576px) {
+    font-size: 9px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $title-text-color;
+}
+
+@import "common-blocks";
+
+@import "header";
+@import "present-section";
+@import "achievements-section";
+@import "projects-section";

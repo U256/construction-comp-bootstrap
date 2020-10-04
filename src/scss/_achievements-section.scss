@@ -1,0 +1,33 @@
+.achievements-section {
+  min-height: 530px;
+  background-color: $soft-accent-bg;
+  margin-bottom: 140px;
+
+  @media (max-width: 992px) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: 576px) {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    padding-top: 73px;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  &__item-number {
+    font-size: 5.8rem;
+    font-weight: bold;
+    color: $accent-color;
+  }
+
+  &__scope {
+    font-size: 2.7rem;
+  }
+}
