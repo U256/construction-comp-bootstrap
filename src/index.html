@@ -10,18 +10,27 @@
    <!-- <link rel="icon" href="/images/favicon.ico" /> -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-   <link href="css/style.min.css" rel="stylesheet" type="text/css">
+   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
    <header class="header">
-      <div class="header__bg-holder">Beautiful Dubai buildings</div>
+      <div class="header__bg-images-wrapper">
+         <img class="header__bg-image header__bg-image_0" src="images/header/header-bg-1.jpg"
+            alt="Beautiful Dubai buildings picture number 1">
+         <img class="header__bg-image header__bg-image_1" src="images/header/header-bg-2.jpg"
+            alt="Beautiful Dubai buildings picture number 2">
+         <img class="header__bg-image header__bg-image_2" src="images/header/header-bg-3.jpg"
+            alt="Beautiful Dubai buildings picture number 3">
+         <img class="header__bg-image header__bg-image_3" src="images/header/header-bg-4.jpg"
+            alt="Beautiful Dubai buildings picture number 4">
+      </div>
       <div class="container">
          <div class="row align-items-center justify-content-between header__top-row">
-            <div class="my-5 m-md-0 col-6 offset-3 col-md-2 offset-md-0 header__logo">
-               <img src="images/header/main-logo.png" alt="logo 'Nussli'">
+            <div class="my-5 m-md-0 col-6 offset-3 col-md-2 offset-md-0 header__logo-wrapper">
+               <img class="header__logo" src="images/header/main-logo.png" alt="logo 'Nussli'">
             </div>
-            <div class="col-12 col-md-9 col-lg-8 header__links-cols">
+            <div class="col-12 col-md-9 col-lg-8 header__links-wrapper">
                <div class="row header__links-row">
                   <div class="col-4 my-5 m-md-0 col-sm-2 offset-lg-1 header__link-wrapper">
                      <a class="header__link" href="#">Projects</a>
@@ -51,6 +60,8 @@
             </div>
          </div>
          <div class="row header__hero-row">
+            <div class="col-2 p-1 m-0 header__bg-navigator">
+            </div>
             <div class="col-10 col-sm-7 col-lg-5 header__hero-chunk">
                <div class="header__hero-text-wrapper">
                   <div class="header__hero-pretitle">Expo</div>
@@ -117,9 +128,12 @@
                <div class="col-6 projects-section__article-col project-article">
                   <h2 class="project-article__title">Article title</h2>
                   <div class="theme-badge project-article__theme-badge">Business</div>
-                  <div class="project-article__text">For the 88th time, the automobile is being celebrated in Geneva. Over a
-                     total exhibition area of 102,000 square meters, around 700 brands are showcasing the first new European automobile
-                     products and innovations of the year — including Škoda, Seat and Volkswagen. The automobile manufacturers are
+                  <div class="project-article__text">For the 88th time, the automobile is being celebrated in Geneva.
+                     Over a
+                     total exhibition area of 102,000 square meters, around 700 brands are showcasing the first new
+                     European automobile
+                     products and innovations of the year — including Škoda, Seat and Volkswagen. The automobile
+                     manufacturers are
                      presenting itselfs with a new exhibition stand, built by NUSSLI and AMBROSIUS.</div>
                   <button class="article-button project-article__read-more-btn">Read More</button>
                </div>
@@ -133,7 +147,7 @@
 
    </footer>
 
-   <script src="js/script.min.js"></script>
+   <script async src="js/script.js"></script>
 </body>
 
 </html>
