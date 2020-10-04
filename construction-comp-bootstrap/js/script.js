@@ -5,19 +5,11 @@ const headerBgImagesArr = document.querySelectorAll(".header__bg-image");
 const imagesCount = headerBgImagesArr.length;
 
 function prevImgNumber(i) {
-  let prevImg = i - 1;
-  if (prevImg < 0) {
-    prevImg = imagesCount - 1;
-  }
-  return prevImg;
+  return (i - 1 < 0) ? (imagesCount - 1) : (i - 1);
 }
 
 function nextImgNumber(i) {
-  let nextImg = i + 1;
-  if (nextImg == imagesCount) {
-    nextImg = 0;
-  }
-  return nextImg;
+  return (i + 1 == imagesCount) ? 0 : (i + 1);
 }
 
 //creating navPoints:
@@ -31,6 +23,7 @@ for (let i = 0; i < imagesCount; i++) {
 headerBgImagesArr[0].classList.add("header__bg-image_active");
 
 function changeBg(i) {
+
   headerBgImagesArr[prevImgNumber(i)].classList.remove(
     "header__bg-image_roll-up"
   );
@@ -42,8 +35,9 @@ function changeBg(i) {
 }
 
 const bgNavPointsArr = document.querySelectorAll(".header__bg-navigator-point");
-bgNavPointsArr[0].classList.add("header__bg-navigator-point_active");
+
 //start bg nav point classes set:
+bgNavPointsArr[0].classList.add("header__bg-navigator-point_active");
 
 function changeNavPoint(i) {
   bgNavPointsArr.forEach((point) => {
@@ -55,6 +49,7 @@ function changeNavPoint(i) {
 
 let iteration = 0;
 
+// Initiator:
 setInterval(() => {
   changeBg(iteration);
   changeNavPoint(nextImgNumber(iteration));
