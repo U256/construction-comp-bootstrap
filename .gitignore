@@ -1,6 +1,9 @@
-node_modules
 .vscode
-
+src
+csscomb.json
+gulpfile.js
+package.json
+package-lock.json
 
 # Logs
 logs
