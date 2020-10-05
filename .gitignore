@@ -1,9 +1,14 @@
 .vscode
 src
+.gitattributes
+.stylelintrc.json
+.stylelintignore
 csscomb.json
+fornode.js
 gulpfile.js
-package.json
 package-lock.json
+package.json
+
 
 # Logs
 logs
